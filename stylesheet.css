@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'norsebold';
     src: url('font/norse-bold-webfont.woff2') format('woff2'),
@@ -11,7 +10,6 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -20,7 +18,7 @@ body {
 .container {
     display: flex;
     height: 100vh;
-    width: 80vw;
+    width: 100vw;
 }
 
 .left {
@@ -30,17 +28,33 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
-    min-width: 38vw;
+    width: 38vw;
     min-height: 100vh;
-
 }
 
 .right {
     background-color: white;
     min-height: 100vh;
-    min-width: 72vw;
+    width: 72vw;
     display: flex;
     flex-direction: column;
+}
+
+.logo {
+    background-color: rgba(0, 0, 0, 0.485);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    max-height: 7em;
+    margin-top: 9em;
+}
+
+.logo_pic img {
+ max-width: 100%;
+ max-height: 6em;
+ height: auto;
+ width: auto; 
 }
 
 .logo_text {
@@ -51,9 +65,61 @@ body {
 
 .credits {
     color: white;
-    font-size: xx-small;
+    font-size: 0.5em;
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 1em;
 }
 
 a {
     color: white;
 }
+
+.intro {
+    margin-top: 6em;
+    padding: 2em;
+    padding-bottom: 3em;
+    max-width: 50vw;
+    font-weight: 600;
+}
+
+.first_intro {
+    padding-bottom: 1.5em;
+}
+
+form {
+    padding-left: 2em;
+    max-width: 40vw;
+    font-weight: 600;
+    color: rgba(44, 44, 44, 0.778);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+
+legend {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    color: black;
+}
+
+input {
+    width: 12em;
+    padding: 0.5em 0.8em;
+    margin: 1em 2em;
+    box-sizing: border-box;
+    border-radius: 5%;
+    border: 2px solid #E5E7EB;
+    outline: none;
+  }
+
+  input:focus {
+    border: 2px solid rgb(90, 90, 223);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.204);
+  }
+
+  input[type=password]:invalid {
+    border: 2px solid rgb(223, 90, 90);
+  }
