@@ -10,15 +10,19 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .container {
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    height: 700px;
+    width: 1050px;
 }
 
 .left {
@@ -28,14 +32,14 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
-    width: 38vw;
+    width: 400px;
     min-height: 100vh;
 }
 
 .right {
     background-color: white;
     min-height: 100vh;
-    width: 72vw;
+    width: 650px;
     display: flex;
     flex-direction: column;
 }
@@ -47,20 +51,18 @@ body {
     justify-content: center;
     padding: 0.5em;
     max-height: 7em;
-    margin-top: 9em;
+    margin-top: 10em;
 }
 
 .logo_pic img {
- max-width: 100%;
- max-height: 6em;
- height: auto;
+ height: 5em;
  width: auto; 
 }
 
 .logo_text {
     font-family: norsebold;
     color: white;
-    font-size: 6em;
+    font-size: 5em;
 }
 
 .credits {
@@ -71,14 +73,14 @@ body {
     padding-bottom: 1em;
 }
 
-a {
+.credit {
     color: white;
 }
 
 .intro {
-    margin-top: 6em;
+    margin-top: 5em;
     padding: 2em;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
     max-width: 50vw;
     font-weight: 600;
 }
@@ -89,9 +91,12 @@ a {
 
 form {
     padding-left: 2em;
-    max-width: 40vw;
+    max-width: 100%;
+    height: 230px;
     font-weight: 600;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.204);
     color: rgba(44, 44, 44, 0.778);
+    font-size: 0.8em;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
@@ -101,14 +106,14 @@ legend {
     font-size: 1em;
     font-weight: 600;
     padding-bottom: 1em;
-    padding-top: 1em;
+    padding-top: 1.5em;
     color: black;
 }
 
 input {
-    width: 12em;
-    padding: 0.5em 0.8em;
-    margin: 1em 2em;
+    width: 14em;
+    height: 1.8em;
+    padding: 0.7em 0.9em;
     box-sizing: border-box;
     border-radius: 5%;
     border: 2px solid #E5E7EB;
@@ -122,4 +127,67 @@ input {
 
   input[type=password]:invalid {
     border: 2px solid rgb(223, 90, 90);
+  }
+
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20vw;
+    overflow: hidden;
+  }
+
+  .label_input {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 0.6em;
+    padding-right: 5.5em;
+  }
+
+  .names, .contacts, .passwords {
+    display: flex;
+  }
+
+  .enter {
+    padding: 2.2em;
+    padding-top: 1.8em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    background-color: #596D48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 2.5em;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.204);
+    width: 12em;
+  }
+
+  button:hover {
+    background-color: #728b5c;
+  }
+
+  .log_in {
+    padding-top: 1.8em;
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+
+  .log {
+    color: #596D48;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .log:hover {
+    color: #728b5c;
   }
